@@ -1,0 +1,8 @@
+/* CSS declarations go here */
+.hero-unit {
+  background: url('chicago-skyline.jpg');
+  background-repeat: no-repeat;
+  color: white;
+  height: 300px;
+  background-size: cover;
+}

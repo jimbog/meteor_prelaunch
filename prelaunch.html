@@ -1,0 +1,61 @@
+<head>
+  <title>prelaunch</title>
+</head>
+
+<body>
+  {{> loginButtons}}
+  {{> billboard}}
+  {{> signUp}}
+  {{> prospects}}
+</body>
+
+<template name="billboard">
+<div class="containter">
+  <div class="row">
+    <div class="hero-unit">
+      <h1>Coming soon</h1>
+      <p>A product that will make your life better!</p>
+    </div>
+  </div>
+</div>
+</template>
+
+<template name="signUp">
+<div class="containter">
+  <div class="row">
+    <div class="well">
+      <div class="text-center">
+        <h1>
+          {{greeting}}
+        </h1>
+        <br />
+        <form>
+          <input type="email" id="prospect-email" placeholder="your email here..." />
+          <input type="submit" class="btn btn-success" value="submit" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</template>
+
+<template name="prospects">
+{{#if isAdmin}}
+<div class="containter">
+  <div class="row">
+    <div class="span12">
+        <table class="table table-bordered">
+          <tr>
+            <th>Email</th>
+          </tr>
+            {{#each prospectsList}}
+            <tr>
+              <td>{{email}}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+  </div>
+</div>
+{{/if}}
+</template>
